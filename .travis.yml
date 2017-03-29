@@ -18,6 +18,6 @@ before_install:
 script:
 - docker version
 - docker-compose version
-#  - './bin/build-test-proj -t'
+- './bin/build-test-proj -t'
 after_success:
 #  - ./bin/push
