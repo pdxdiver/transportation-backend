@@ -11,7 +11,7 @@ services:
     healthcheck:
       test: "exit 0"
 
-  web:
+  transport-service:
     environment:
     - PROJ_SETTINGS_DIR=${PROJ_SETTINGS_DIR}
     - DEPLOY_TARGET=${DEPLOY_TARGET}

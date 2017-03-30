@@ -11,7 +11,7 @@ while getopts ":lt" opt; do
         t)
           docker-compose -f travis-docker-compose.yml build
           docker-compose -f travis-docker-compose.yml run \
-          #--entrypoint /code/bin/test-entrypoint.sh $DOCKER_IMAGE
+          --entrypoint /code/bin/test-entrypoint.sh $DOCKER_IMAGE
           ;;
         *)
           usage
