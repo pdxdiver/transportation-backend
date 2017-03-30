@@ -7,3 +7,5 @@ ADD ./requirements.txt /provision/
 WORKDIR /provision/
 RUN pip install -r requirements.txt
 WORKDIR /code/
+ADD . /code/
+ENTRYPOINT [ "/code/bin/docker-entrypoint.sh" ]
