@@ -6,6 +6,7 @@ RUN apt-get -y install gdal-bin
 ADD ./requirements.txt /provision/
 WORKDIR /provision/
 RUN pip install -r requirements.txt
+RUN pip install --upgrade --user awscli
 WORKDIR /code/
 ADD . /code/
 ENTRYPOINT [ "/code/bin/docker-entrypoint.sh" ]
