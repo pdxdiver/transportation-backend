@@ -1,6 +1,8 @@
 sudo: required
 services:
   - docker
+install:
+  - pip install --upgrade --user awscli
 env:
   global:
     - DOCKER_VERSION=1.13.1-0~ubuntu-trusty
@@ -20,4 +22,4 @@ script:
 - docker-compose version
 - './bin/build-test-proj.sh -t'
 after_success:
-#  - ./bin/push
+#  - ./bin/push.sh
